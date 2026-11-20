@@ -1,0 +1,16 @@
+[Unit]
+Description=SAN Port Monitor - coletor (SSH nos switches Brocade)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=sanmon
+Group=sanmon
+WorkingDirectory=/opt/brocade-portal
+EnvironmentFile=/opt/brocade-portal/.env
+ExecStart=/opt/brocade-portal/.venv/bin/python -m sanmon.collector --loop
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

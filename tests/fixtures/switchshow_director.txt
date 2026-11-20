@@ -1,0 +1,9 @@
+switchName:	DCX01
+switchState:	Online
+switchDomain:	10
+Fabric Name:	FAB_B
+
+Index Slot Port Address Media  Speed        State    Proto
+=======================================================
+   0    1    0   0a0000   id    32G      Online      FC  F-Port  10:00:00:10:9b:11:22:33
+  48    2    0   0a3000   id    N32      No_Sync     FC

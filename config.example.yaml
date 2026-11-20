@@ -1,0 +1,32 @@
+# Copie para config.yaml e ajuste.
+ssh:
+  username_env: SAN_USER     # credenciais lidas de variáveis de ambiente
+  password_env: SAN_PASS
+  # key_file: /home/sanmon/.ssh/id_rsa   # alternativa a senha
+  timeout: 30
+  workers: 10                # switches coletados em paralelo
+
+poll_interval: 300           # segundos entre coletas (modo --loop)
+history_days: 30
+db_path: data/sanmon.db
+
+thresholds:
+  rx_warn_dbm: -7.0
+  rx_crit_dbm: -10.0
+  tx_warn_dbm: -5.0
+  tx_crit_dbm: -8.0
+  use_sfp_thresholds: true   # usa o "warn low" do próprio SFP quando o FOS informar
+  error_crit_delta: 100      # soma de erros entre 2 coletas para virar crítico
+  ignore_no_light: false     # true = porta No_Light com SFP não é tratada como offline
+  error_counters: [crc_err, enc_out, link_fail, loss_sync, loss_sig, disc_c3, c3timeout_tx, pcs_err, uncor_err]
+
+switches:
+  - host: 10.0.0.11
+    name: SW-FAB-A-01        # opcional (o nome real vem do switchshow)
+    site: DC1
+  - host: 10.0.0.12
+    site: DC1
+    vf: true                 # opcional: true/false força; omitido = autodetecta (lscfg --show)
+  - host: 10.0.0.21
+    site: DC2
+    vf: false                # pula o lscfg (switch sem VF, conta sem permissão de chassi)

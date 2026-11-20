@@ -1,0 +1,24 @@
+switchName:	SANSW01
+switchType:	162.0
+switchState:	Online
+switchMode:	Native
+switchRole:	Principal
+switchDomain:	1
+switchId:	fffc01
+switchWwn:	10:00:c4:f5:7c:12:34:56
+zoning:		ON (cfg_prod)
+switchBeacon:	OFF
+FC Router:	OFF
+Fabric Name:	FAB_A
+HIF Mode:	OFF
+Allow XISL Use:	OFF
+LS Attributes:	[FID: 128, Base Switch: No, Default Switch: Yes, Ficon Switch: No, Address Mode 0]
+
+Index Port Address  Media Speed   State       Proto
+==================================================
+   0   0   010000   id    N16	   Online      FC  F-Port  10:00:00:10:9b:aa:bb:cc 
+   1   1   010100   id    N16	   Online      FC  E-Port  10:00:c4:f5:7c:00:00:01 "SANSW02" (downstream)
+   2   2   010200   id    N16	   No_Light    FC  
+   3   3   010300   --    N16	   No_Module   FC  
+   4   4   010400   id    N16	   No_Light    FC  Disabled (Persistent)
+   5   5   010500   id    N16	   Online      FC  F-Port  1 N Port + 3 NPIV public

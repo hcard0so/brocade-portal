@@ -1,0 +1,27 @@
+=============
+Port  0:
+=============
+Identifier:  3    SFP
+Vendor Name: BROCADE
+Vendor PN:   57-1000012-01
+Serial No:   UAF1112300000AB
+Wavelength:  850  (units nm)
+Temperature: 35       Centigrade
+RX Power:    -2.9     dBm (510.5uW)
+TX Power:    -2.4     dBm (575.1 uW)
+=============
+Port  1:
+=============
+Identifier:  3    SFP
+RX Power:    -11.2    dBm (75.9 uW)   31.6   uW  1258.9 uW  63.1   uW   794.3  uW
+TX Power:    -2.4     dBm (575.5 uW)  125.9  uW  1258.9 uW  251.2  uW   794.3  uW
+=============
+Port  2:
+=============
+Identifier:  3    SFP
+RX Power:    -inf     dBm (0.0  uW)
+TX Power:    501.2 uWatts
+=============
+Port  3:
+=============
+SFP not present

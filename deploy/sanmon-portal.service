@@ -1,0 +1,14 @@
+[Unit]
+Description=SAN Port Monitor - portal Streamlit
+After=network-online.target sanmon-collector.service
+
+[Service]
+User=sanmon
+Group=sanmon
+WorkingDirectory=/opt/brocade-portal
+ExecStart=/opt/brocade-portal/.venv/bin/streamlit run app.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
